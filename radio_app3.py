@@ -42,14 +42,8 @@ if selected_station_url:
     if selected_station_logo:
         st.image(selected_station_logo, width=100)
 
-    # Using HTML to embed audio player
     st.markdown(
-        f"""
-        <audio controls autoplay style="width: 100%;">
-            <source src="{selected_station_url}" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        """,
+        f'<iframe src="{selected_station_url}" width="100%" height="300" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
         unsafe_allow_html=True
     )
 else:
